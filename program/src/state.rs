@@ -1,4 +1,3 @@
-//! State transition types
 
 use crate::{error::AmmError, math::Calculator};
 use serum_dex::state::ToAlignedBytes;

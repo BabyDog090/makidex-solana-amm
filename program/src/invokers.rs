@@ -1,4 +1,3 @@
-//! Program state invoker
 
 use solana_program::{
     account_info::AccountInfo,

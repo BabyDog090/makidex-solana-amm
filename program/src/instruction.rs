@@ -1,4 +1,3 @@
-//! Instruction types
 
 #![allow(clippy::too_many_arguments)]
 #![allow(deprecated)]

@@ -1,4 +1,3 @@
-use anyhow::{anyhow, Result};
 use solana_client::{
     rpc_client::RpcClient,
     rpc_config::RpcSendTransactionConfig,

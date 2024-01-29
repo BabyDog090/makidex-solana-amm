@@ -1,4 +1,3 @@
-//! Program entrypoint definitions
 
 #![cfg(all(target_arch = "bpf", not(feature = "no-entrypoint")))]
 

@@ -1,4 +1,3 @@
-// #![deny(missing_docs)]
 
 //! An Uniswap-like program for the Solana blockchain.
 #[macro_use]

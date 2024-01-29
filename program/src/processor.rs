@@ -1,4 +1,3 @@
-//! Program state processor
 #![allow(deprecated)]
 use crate::{
     error::AmmError,

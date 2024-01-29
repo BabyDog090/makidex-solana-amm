@@ -1,4 +1,3 @@
-#![allow(dead_code)]
 use anchor_client::{Client, Cluster};
 use anchor_lang::prelude::AccountMeta;
 use anyhow::{format_err, Result};
@@ -13,6 +12,22 @@ use solana_account_decoder::{
 use solana_client::{
     rpc_client::RpcClient,
     rpc_config::{RpcAccountInfoConfig, RpcProgramAccountsConfig, RpcTransactionConfig},
+    rpc_filter::{Memcmp, RpcFilterType},
+    rpc_request::TokenAccountsFilter,
+};
+use solana_sdk::{
+    commitment_config::CommitmentConfig,
+    compute_budget::ComputeBudgetInstruction,
+    message::Message,
+    program_pack::Pack,
+    pubkey::Pubkey,
+    signature::{Keypair, Signature, Signer},
+    transaction::Transaction,
+};
+use solana_transaction_status::UiTransactionEncoding;
+use std::path::Path;
+use std::rc::Rc;
+use std::str::FromStr;
 use std::{collections::VecDeque, convert::identity, mem::size_of};
 
 mod instructions;

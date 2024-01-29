@@ -1,4 +1,3 @@
-use arrform::{arrform, ArrForm};
 use serde::{Deserialize, Serialize};
 use solana_program::{
     msg,
@@ -13,6 +12,22 @@ macro_rules! check_assert_eq {
     ($input:expr, $expected:expr, $msg:expr, $err:expr) => {
         if $input != $expected {
             log_keys_mismatch(concat!($msg, " mismatch:"), $input, $expected);
+            return Err($err.into());
+        }
+    };
+}
+
+pub fn log_keys_mismatch(msg: &str, input: Pubkey, expected: Pubkey) {
+    msg!(arrform!(
+        LOG_SIZE,
+        "ray_log: {} input:{}, expected:{}",
+        msg,
+        input,
+        expected
+    )
+    .as_str());
+}
+
 /// LogType enum
 #[derive(Debug)]
 pub enum LogType {

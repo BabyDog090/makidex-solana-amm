@@ -1,4 +1,3 @@
-//! Defines PreciseNumber, a U256 wrapper with float-like operations
 #![allow(clippy::assign_op_pattern)]
 #![allow(clippy::ptr_offset_with_cast)]
 #![allow(clippy::unknown_clippy_lints)]

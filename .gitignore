@@ -3,4 +3,4 @@ client/target
 .idea*
 *.json
 *~
-.git-*
+.git-*/
